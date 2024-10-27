@@ -45,9 +45,9 @@ The current version of Vite splits TypeScript configuration into three files, tw
       "path": "./tsconfig.node.json"
     }
   ],
-  "compilerOptions": {    // [!code highlight]
+  "compilerOptions": {// [!code highlight]
     "baseUrl": ".", // [!code highlight]
-    "paths": {      // [!code highlight]
+    "paths": {// [!code highlight]
       "@/*": ["./src/*"] // [!code highlight]
     } // [!code highlight]
   } // [!code highlight]
@@ -71,7 +71,67 @@ Add the following code to the `tsconfig.app.json` file to resolve paths
       ] // [!code highlight]
     } // [!code highlight]
     // ...
-  } 
+  }
+```
+
+</Step>
+
+<Step>
+## Update vite.config.ts
+
+Install the `@types/node` package to avoid path resolution errors:
+
+```bash
+npm i -D @types/node
+
+```
+
+```ts
+import path from "path";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+```
+
+</Step>
+
+<Step>
+## Finally run the cli
+
+```bash
+npx @venusai/loom-ui init
+```
+</Step>
+
+<Step>
+
+## That's it!!
+
+You can now use the Loom UI components in your project.
+
+```bash
+ npx @venusai/loom-ui add button
+```
+
+The command above will add the Button component to your project. You can then import it like this:
+
+```tsx
+import { Button } from "@/components/loomui/button"; // [!code highlight]
+export default function Home() {
+  return (
+    <div>
+      <Button>Click me</Button> {/* [!code highlight] */}
+    </div>
+  );
+}
 ```
 
 </Step>
