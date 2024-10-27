@@ -1,0 +1,67 @@
+---
+title: Next.js
+description: Install and configure loom ui in your Next.js project
+---
+
+<Steps>
+
+<Step>
+
+## Create a new Next.js project
+
+```bash
+npx create-next-app@latest
+```
+
+</Step>
+
+**_You need to have tailwindcss installed in your project to use loom ui._**
+
+<Step>
+
+## Initialize Loom UI
+
+Use the init command to install the Loom ui components and configuration.
+
+```bash
+npx @venusai/loom-ui init
+```
+
+This will configure components.json and the file structure similar to the example given below below.
+
+├── src/ <br/>
+│ ├── components/ <br/>
+│ │ └── loomui/ <br/>
+│ │ └── (component files will be added here) <br/>
+│ └── lib/ <br/>
+│ └── utils.ts <br/>
+└── components.json <br/>
+
+</Step>
+
+<Step>
+
+## That's it!!
+
+You can now use the Loom UI components in your project.
+
+```bash
+ npx @venusai/loom-ui add button
+```
+
+The command above will add the Button component to your project. You can then import it like this:
+
+```tsx
+import { Button } from "@/components/loomui/button"; // [!code highlight]
+export default function Home() {
+  return (
+    <div>
+      <Button>Click me</Button> {/* [!code highlight] */}
+    </div>
+  );
+}
+```
+
+</Step>
+
+</Steps>
