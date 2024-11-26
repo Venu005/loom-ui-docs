@@ -7,6 +7,11 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "Loom UI",
+  description: "Loom UI is a customizable opensource component library",
+};
+
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>

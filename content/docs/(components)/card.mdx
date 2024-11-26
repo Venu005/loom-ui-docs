@@ -1,0 +1,36 @@
+---
+title: Card
+description: Displays a card with header, content, and footer..
+---
+
+## Usage
+
+<PreviewWithCode>
+  <Preview>
+    <ClientOnlyCard />
+  </Preview>
+  ```tsx 
+import {
+  LoomCard,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/loomui/Card";
+
+<Card>
+ <CardHeader>
+    <CardTitle>LoomUI NewsLetter</CardTitle>
+    <CardDescription>Stay ahead of 99% developers</CardDescription>
+  </CardHeader>
+  <CardContent>
+      Subscribe to our news letter for latest updates
+     <input placeholder="Subscribe to us !!" name="email" />
+  </CardContent>
+  <CardFooter  className="text-muted-foreground">
+   See you on the other side.
+  </CardFooter>
+</Card>
+  ```
+</PreviewWithCode>

@@ -29,13 +29,24 @@ npx @venusai/loom-ui init
 
 This will configure components.json and the file structure similar to the example given below below.
 
-├── src/ <br/>
-│ ├── components/ <br/>
-│ │ └── loomui/ <br/>
-│ │ └── (component files will be added here) <br/>
-│ └── lib/ <br/>
-│ └── utils.ts <br/>
-└── components.json <br/>
+<Files>
+  <Folder name="src" defaultOpen>
+    <Folder name="app">
+      <File name="layout.tsx" />
+      <File name="page.tsx" />
+      <File name="global.css" />
+    </Folder>
+    <Folder name="components" defaultOpen>
+      <Folder name="loomui" defaultOpen>
+        <File name="button.tsx" />
+      </Folder>
+    </Folder>
+    <Folder name="lib" defaultOpen>
+      <File name="utils.ts" />
+    </Folder>
+    <File name="components.json" />
+  </Folder>
+</Files>
 
 </Step>
 
@@ -51,7 +62,7 @@ You can now use the Loom UI components in your project.
 
 The command above will add the Button component to your project. You can then import it like this:
 
-```tsx
+```tsx title="page.tsx"
 import { Button } from "@/components/loomui/button"; // [!code highlight]
 export default function Home() {
   return (

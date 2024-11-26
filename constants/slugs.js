@@ -1,0 +1,16 @@
+export const slugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "vercel",
+  "git",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "figma",
+];

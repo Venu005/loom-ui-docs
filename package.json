@@ -9,13 +9,20 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "framer-motion": "^11.11.10",
     "fumadocs-core": "14.0.2",
     "fumadocs-mdx": "11.0.0",
     "fumadocs-ui": "14.0.2",
     "lucide-react": "^0.453.0",
     "next": "15.0.0",
+    "next-themes": "^0.3.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-icon-cloud": "^4.1.4",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.13",

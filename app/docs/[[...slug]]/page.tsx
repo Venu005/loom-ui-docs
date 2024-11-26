@@ -12,7 +12,23 @@ import { Heading } from "fumadocs-ui/components/heading";
 import { Pre, CodeBlock } from "fumadocs-ui/components/codeblock";
 import NLogo from "@/components/NLogo";
 import VLogo from "@/components/VLogo";
+import { File, Folder, Files } from "fumadocs-ui/components/files";
 import { Step, Steps } from "fumadocs-ui/components/steps";
+import { PreviewWithCode, Preview } from "@/components/PreviewWithCode";
+import { Button } from "@/components/loomui/Button";
+import dynamic from "next/dynamic";
+
+const ClientOnlyCard = dynamic(
+  () => import("../../../extra-ssr/ClientOnlyCard")
+);
+import {
+  LoomCard,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/loomui/Card";
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
@@ -36,6 +52,19 @@ export default async function Page(props: {
             Accordions,
             Step,
             Steps,
+            File,
+            Folder,
+            Files,
+            PreviewWithCode,
+            Preview,
+            Button,
+            LoomCard,
+            CardHeader,
+            CardTitle,
+            CardDescription,
+            CardContent,
+            CardFooter,
+            ClientOnlyCard,
             h1: (props) => <Heading as="h1" {...props} />,
             h2: (props) => <Heading as="h2" {...props} />,
             h3: (props) => <Heading as="h3" {...props} />,

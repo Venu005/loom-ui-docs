@@ -1,17 +1,121 @@
 ---
 title: Button
-description: Easy button component for all your uses
+description: Displays a button or a component that looks like a button.
 ---
 
-## Code Block
+## Usage
 
-```js
-console.log("Hello World");
+<PreviewWithCode>
+  <Preview>
+    <Button variant="">Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button>Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
+
+## Using as a Link
+
+You can use `buttonVariants` to create a link that looks like a button.
+
+```tsx
+import { buttonVariants } from "@/components/loomui/button";
 ```
 
-## Cards
+```tsx
+<Link href="/login" className={buttonVariants({ variant: "secondary" })}>
+  Sign in
+</Link>
+```
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
-</Cards>
+You can also use the `asChild` prop to render a child component as a button.
+
+```tsx
+<Button asChild>
+  <Link href="/login">Sign in</Link>
+</Button>
+```
+
+# Variants
+
+You can use the `variant` prop to change the appearance of the button. Below is a list of all the variants available. You can create your own variants too!!
+
+## Primary
+
+<PreviewWithCode>
+  <Preview>
+    <Button>Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button>Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
+
+## Secondary
+
+<PreviewWithCode>
+  <Preview>
+    <Button variant="secondary">Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button variant="secondary">Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
+
+## Destructive
+
+<PreviewWithCode>
+  <Preview>
+    <Button variant="destructive">Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button variant="destructive">Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
+
+## Outline
+
+<PreviewWithCode>
+  <Preview>
+    <Button variant="outline">Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button variant="outline">Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
+
+## Ghost
+
+<PreviewWithCode>
+  <Preview>
+    <Button variant="ghost">Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button variant="ghost">Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
+
+## Link
+
+<PreviewWithCode>
+  <Preview>
+    <Button variant="link">Click me</Button>
+  </Preview>
+  ```tsx title="Component.tsx" import {Button} from "@/components/loomui/button";
+  <div>
+    <Button variant="link">Click me</Button>
+  </div>
+  ```
+</PreviewWithCode>
